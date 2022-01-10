@@ -1,0 +1,29 @@
+/** @format */
+
+@import '../../../styles/colors';
+@import '../../../styles//mixins';
+
+.container {
+	display: grid;
+	grid-template-columns: 32px 1fr 32px;
+	grid-template-rows: 100px 1fr;
+	margin-bottom: 32px;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+	&__title {
+		@include text-params(normal, 500, 20px, 28px);
+	}
+	.users {
+		grid-row: 2/3;
+		grid-column: 2/3;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(auto-fill, 48px);
+		display: grid;
+		gap: 4px;
+	}
+}

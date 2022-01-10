@@ -1,0 +1,30 @@
+/** @format */
+
+@import '../../../../styles/colors';
+@import '../../../../styles//mixins';
+
+.users__item,
+.users__item_default {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	align-items: center;
+	padding: 0 32px;
+	min-height: 48px;
+
+	background-color: $white-color;
+	border-radius: 6px;
+	@include text-params(normal, 400, 14px, 20px);
+	color: $blue-grey;
+
+	.icons-wrapper {
+		display: flex;
+		justify-content: flex-end;
+		gap: 16px;
+	}
+	:nth-child(5) {
+		text-align: center;
+	}
+}
+.users__item_default {
+	@include text-params(normal, 500, 14px, 20px);
+}

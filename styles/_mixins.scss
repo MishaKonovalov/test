@@ -1,0 +1,6 @@
+@mixin text-params($font-style, $font-weigh, $font-size, $line-height) {
+  font-style: $font-style;
+  font-weight: $font-weigh;
+  font-size: $font-size;
+  line-height: $line-height;
+}

@@ -1,0 +1,39 @@
+/** @format */
+
+@import '../../../../styles/colors';
+@import '../../../../styles//mixins';
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	@include text-params(normal, 500, 14px, 20px);
+
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+.button_add {
+	color: $white-color;
+	background: $primary;
+	padding: 8px 32px;
+	gap: 11px;
+}
+.button_create {
+	color: $white-color;
+	background: $primary;
+	padding: 8px 48px;
+}
+.button_cancel {
+	background-color: $disabled-background;
+	color: $disabled-color;
+	padding: 8px 48px;
+}
+.button_adit,
+.button_delete {
+	background-color: $dark-white;
+	color: $disabled-color;
+	padding: 6px 6px;
+}
